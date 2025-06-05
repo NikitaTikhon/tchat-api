@@ -1,0 +1,41 @@
+spring:
+  datasource:
+    url: ${db-url}
+    username: ${db-username}
+    password: ${db-password}
+    driver-class-name: org.postgresql.Driver
+
+  mail:
+    protocol: smtps
+    host: smtp.mail.ru
+    port: 465
+    username: ${mail-username}
+    password: ${mail-password}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+  web:
+    resources:
+      add-mappings: true
+
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    open-in-view: false
+
+
+cloudinary:
+  cloud-name: ${cloud-name}
+  api-key: ${cloud-api-key}
+  api-secret: ${cloud-api-secret}
+
+jwt:
+  secret-key: ${secret-key}
